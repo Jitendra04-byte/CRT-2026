@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double celsius, fahrenheit;
+
+    // Take input from user
+    cout << "Enter temperature in Celsius: ";
+    cin >> celsius;
+
+    // Convert to Fahrenheit
+    fahrenheit = (celsius * 9.0 / 5.0) + 32;
+
+    // Display result
+    cout << "Temperature in Fahrenheit: " << fahrenheit << "°F" << endl;
+
+    return 0;
+}
