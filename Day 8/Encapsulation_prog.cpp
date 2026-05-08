@@ -7,10 +7,12 @@ class ATM {
     int balance;
     public:
 
-    ATM(int initialBalance) {
-        balance = initialBalance;
+    //Encapsulation
+    void setBalance(int balance) {
+        this->balance = balance;
     }
 
+    // Withdraw method of ATM
     void withdraw(int amount) {
         if (amount > balance) {
             cout << "Insufficient blanace" << endl;
@@ -19,18 +21,22 @@ class ATM {
             cout << "Amount withdrawn: " << amount << endl;
         }
     }
-    // Show balance method of ATM
-    void showBalance() {
-        cout<< "Current Balance: " << balance << endl;  
+
+    int getBalance() {
+        
+        return balance;
 
     }
 };
 
 int main() {
-    ATM a(5000); // Initial balance of 5000
-    a.showBalance();
+    int n;
+    cin>>n;
+    ATM a; // Initial balance of 5000
+    a.setBalance(n);
+    cout<<" Balance is: "<<a.getBalance()<<endl; 
     a.withdraw(500);
-    a.showBalance();
+    cout<<"Balance is: "<<a.getBalance()<<endl;
 
     return 0;
 }
