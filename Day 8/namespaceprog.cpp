@@ -15,7 +15,7 @@ namespace Rohit {
 
 int main() {
     Virat::show();
-    rohit::show();
+    Rohit::show();
 
     return 0;
 }
