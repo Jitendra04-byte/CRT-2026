@@ -2,7 +2,7 @@
 using namespace std;
 
 bool isPow(int n) {
-    if (n <= 0) {
+    if (n == 0) {
         return false;
     }
     if (n == 1) {
@@ -18,10 +18,15 @@ int main() {
         int n;
         cout << "Enter the value of n: ";
         cin >> n;
-
-        cout << n << "is a power of 2: " <<  isPow(n) << endl;
+        bool result = isPow(n);
+        if(result){
+            cout << n << " is a power of 2: " << endl;
+        }
+        else{
+            cout << n << " is not a power of 2: " << endl;
+        }
 
         
     }
-    return 0;
+    return 0;                            
 }
