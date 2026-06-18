@@ -48,6 +48,10 @@ public:
         }
         cout << endl;
     }
+    void clear() {
+        front = rear = -1;
+    }
+    
 };
 
 int main() {
@@ -62,5 +66,7 @@ int main() {
     cout << "Dequeued element: " << queue.dequeue() << endl;
     cout << "Dequeued element: " << queue.dequeue() << endl;
     queue.peek();
+    queue.display();
+    queue.clear();
     return 0;
 }
